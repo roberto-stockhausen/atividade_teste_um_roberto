@@ -1,18 +1,19 @@
-<?php
+<?php /* Opens php script */
     session_start();
 
-    include("infra/db/connect.php");
+    include("infra/db/connect.php"); /* includes the php file that connects to the sql server */
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
 
-        $usuario = $_POST["usuario"];
+        $usuario = $_POST["usuario"]; /* Declares two variables and inserts the values given by the user in the html form */
         $senha = $_POST["senha"];
         
         $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND senha = '$senha'";
+        /* Declares a variable with sql code inside */
 
-        $resultado = $conn->query($sql);
+        $resultado = $conn->query($sql); /* Creates a variable using query with the sql code inside the $sql file */
 
-        if ($resultado->num_rows > 0){
+        if ($resultado->num_rows > 0){ /* If it finds a corresponding user and passwords, sends to home. Otherwise, declare the erro variable */
             $_SESSION["usuario"] = $usuario;
             header("Location: public/home.php");
             exit();
@@ -22,7 +23,7 @@
     }
 ?>
 
-<html lang="en">
+<html lang="en"> <!-- Now for the actual HTML login form-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,11 +41,9 @@
         <br>
         <?php
         
-            if(isset($erro)){
+            if(isset($erro)){ /* If the erro variable is declared, show it below the login spaces */
                 echo $erro;
             };
-
-            // esse erro serve ara alguma coisa
         
         ?>
         <br>

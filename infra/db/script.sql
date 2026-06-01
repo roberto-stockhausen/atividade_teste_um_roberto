@@ -1,4 +1,4 @@
-CREATE DATABASE sistema_simples_m1;
+CREATE DATABASE sistema_simples_m1; /* This is just here to save the sql code. */
 
 USE sistema_simples_m1;
 
