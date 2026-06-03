@@ -1,6 +1,6 @@
-CREATE DATABASE sistema_simples_m1; /* This is just here to save the sql code. */
+CREATE DATABASE sistema_simples_m1_roberto; /* This is just here to save the sql code. */
 
-USE sistema_simples_m1;
+USE sistema_simples_m1_roberto;
 
 CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,

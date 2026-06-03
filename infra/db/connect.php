@@ -1,9 +1,9 @@
 <?php
-    /* Defines variables used to connect wiith database */
+    /* Defines variables used to connect with database */
     $host = "localhost";
     $user = "root";
     $pass = "root";
-    $db = "sistema_simples_m1";
+    $db = "sistema_simples_m1_roberto";
 
     $conn = new mysqli($host,$user,$pass,$db); /* Connects to MySQL using said variables */
 
