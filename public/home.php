@@ -39,6 +39,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         echo "<script> alert('Erro ao alterar')</script>";
     }
     }
+    if (isset($_POST['delete'])){
+    $DelUsuario = $_POST['ExcluirNome'];
+    $DelId = $_POST['ExcluirId'];
+
+    $sql = "DELETE from usuarios 
+    WHERE usuario = '$DelUsuario' AND id = '$DelId';";
+
+    if($conn->query($sql) === TRUE){
+        echo "<script> alert('Usuário excluído com sucesso!')</script>";
+    }else{
+        echo "<script> alert('Erro ao excluir!')</script>";
+    }
+    }
 
 };
 
