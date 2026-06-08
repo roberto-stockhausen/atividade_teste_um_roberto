@@ -1,0 +1,6 @@
+Atividade_teste_um
+Uma atividade para ensinar a criação de sites que podem ser acessados por meio de um servidor, também ensinando backend e a conexão do site com banco de dados.
+Nos estamos usando o XAMPP para iniciar um servidor e gerenciar o banco de dados.
+Ao invés de usar HTML, nós usamos php, que pode incorporar html junto, ao mesmo tempo que é uma linguagem lógica capaz de enviar pedidos ao banco de dados. Além disso, arquivos php podem chamar outros arquivos php com código dentro, salvando linhas. Arquivos como connect.php e table.php são chamados dentro da página home. Arquivos php dentro da pasta components são pedaços de código comuns que poderão ser usados em multiplas páginas.
+O arquivo script.sql não serve nenhuma função além de salvar texto usado para comandos sql.
+Dentro do index, o connect.php faz a conexão com o banco de dados, que é usada para validar os dados inseridos no log-in para depois te enviar a pagina home. Dentro da página home, e qualquer página subsequente, haverá uma validação para ver se você está conectado, e se você não estiver, ele te enviará de volta ao index. Dentro do home, há campos para cadastrar usuários, excluí-los e alterá-los. Também há uma tabela mostrando todos os usuários cadastrados e suas senhas.
