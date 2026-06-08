@@ -8,6 +8,8 @@ inside the "home" page to display connected users.-->
         <th>ID</th> 
         <th>Usuário</th>
         <th>Senha</th>
+        <th>Excluir</th>
+        <th>Editar</th>
     </tr>
 
     <?php
@@ -24,6 +26,7 @@ inside the "home" page to display connected users.-->
                     <td>". $linha['id'] . "</td>
                     <td>". $linha['usuario'] . "</td>
                     <td>". $linha['senha'] . "</td>
+                    <td> <a href=components/delete.php?id=". $linha['id'] ."> Excluir </td>
                 </tr>
         ";
 

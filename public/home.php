@@ -1,26 +1,12 @@
 <?php
-session_start(); 
-if(!isset($_SESSION["usuario"])){
-    header("Location: ../index.php");
-    exit();
-}
-
+session_start();
+include("components/validate.php");
 include("../infra/db/connect.php");
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     if (isset($_POST['criar'])){
-    $novoUsuario = $_POST['usuario'];
-    $novaSenha = $_POST['senha'];
-
-    $sql = "INSERT INTO usuarios (usuario,senha) 
-    VALUES ('$novoUsuario','$novaSenha')";  
-
-    if($conn->query($sql) === TRUE){
-        echo "<script> alert('Usuário cadastrado com sucesso!')</script>";
-    }else{
-        echo "<script> alert('Erro ao cadastrar')</script>";
-    }
+    include("components/signup.php");
     }
 
     if (isset($_POST['update'])){
@@ -40,17 +26,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     }
     if (isset($_POST['delete'])){
-    $DelUsuario = $_POST['ExcluirNome'];
-    $DelId = $_POST['ExcluirId'];
-
-    $sql = "DELETE from usuarios 
-    WHERE usuario = '$DelUsuario' AND id = '$DelId';";
-
-    if($conn->query($sql) === TRUE){
-        echo "<script> alert('Usuário excluído com sucesso!')</script>";
-    }else{
-        echo "<script> alert('Erro ao excluir!')</script>";
-    }
+    include("components/delete.php");
     }
 
 };
