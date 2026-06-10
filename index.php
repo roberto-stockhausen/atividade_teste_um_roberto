@@ -7,6 +7,8 @@
 
         $usuario = $_POST["usuario"]; /* Declares two variables and inserts the values given by the user in the html form */
         $senha = $_POST["senha"];
+
+        if ($usuario != null && $senha != null){ // checks if any of the values are empty.
         
         $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND senha = '$senha'";
         /* Declares a variable with sql code inside */
@@ -18,7 +20,11 @@
             header("Location: public/home.php");
             exit();
         }else{
-            $erro = "Usuário ou senha inválidos!";
+            $erro = "Owww.. Parwece que vwocê digitou o usuário ou senha errados... (˶˃-˂˶), Mas eu confio em você! Tente novamente! (,,> ᴗ <,,) ";
+        }
+        }
+        else{
+        $erro = "Preencha todos os campos!";
         }
     }
 ?>
