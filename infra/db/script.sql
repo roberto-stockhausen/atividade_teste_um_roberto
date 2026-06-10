@@ -9,3 +9,5 @@ CREATE TABLE usuarios (
 );
 
 INSERT INTO usuarios (usuario, senha) VALUES ('admin','123');
+
+UPDATE usuarios  SET usuario = 'Joshua', senha = '123' WHERE usuario = 'Joshua_do_Bar' AND senha = '12345';

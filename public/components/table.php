@@ -26,7 +26,8 @@ inside the "home" page to display connected users.-->
                     <td>". $linha['id'] . "</td>
                     <td>". $linha['usuario'] . "</td>
                     <td>". $linha['senha'] . "</td>
-                    <td> <a href=components/delete.php?id=". $linha['id'] ."> Excluir </td>
+                    <td> <a href=delete.php?id=". $linha['id'] ."> Excluir </td>
+                    <td> <a href=update.php?id=". $linha['id'] ."> Editar </td>
                 </tr>
         ";
 
