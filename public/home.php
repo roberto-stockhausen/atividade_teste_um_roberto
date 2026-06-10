@@ -37,6 +37,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Home</title>
 </head>
 <body>
@@ -51,6 +52,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <br>
         <label>Senha:</label>
         <input type="password" name="senha">
+        <br>
+        <label> Confirmar Senha: </label>
+        <input type="password" name="senhadenovo">
         <br>
         <?php
         
