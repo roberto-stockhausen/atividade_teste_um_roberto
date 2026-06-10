@@ -63,34 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <button type="submit" name="criar">Cadastrar</button>
     </form>
     <hr>
-    <h4> Alterar Usuário </h4>
-    <form method="POST">
-            <label> Usuário: </label>
-            <input type="text" name="usuario2">
-            <br>
-            <label> Senha: </label>
-            <input type="text" name="senha2">
-            <br>
-            <label> Novo Nome: </label>
-            <input type="text" name="NovoNome">
-            <br>
-            <label> Nova Senha: </label>
-            <input type="text" name="NovaSenha">
-            <br>
-            <button type="submit" name="update"> Atualizar </button>
-    </form>
-    <hr>
-    <h4> Excluir Usuário </h4>
-    <form method="POST">
-            <label> Usuário: </label>
-            <input type="text" name="ExcluirNome">
-            <br>
-            <label> ID: </label>
-            <input type="text" name="ExcluirId">
-            <br>
-            <button type="submit" name="delete"> Excluir </button>
-    </form>
-    <hr>
+
     <?php
     
     include("components/table.php")
